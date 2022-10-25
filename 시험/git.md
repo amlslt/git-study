@@ -1,2 +1,17 @@
-## git config --global user.name "amlslt"
-## git config --global user.email "khm66256625@gmail.com"
+## 용어
+- glt = 바보, 가치없는사람
+- 원격 저장소 = 원격서버에서 관리하는 저장소 타인의 저장소 포함, 여러사람과 공유가능
+- 병합 = 두 소스코드를 합치는것
+- 커밋(commit) = 차일이나 폴더의 추가, 변경사항을 기록하는것
+- 푸시(push) = 자신의 로컬저장소의 파일을 원격저장소에 업로드하는것
+- 풀(pull) = 원격저장소의 변경사항을 로컬저장소에 저장하는것
+- 페치(fetch) = 원격저장소의 변경사항을 내리받으나 병합은 하지 않는것
+- 브랜치(branch) = 분기된 하나의 갈래
+- 포크(fork) = 다른사람의 원격저장소를 가져와 자신의 원격저장소로 만드는것
+- 풀 리퀘스트(pull request) = 포크한 원격저장소의 변경사항을 가지고 오는것
+- 
+## 로컬 사용자 설정 (글로벌)
+git clone --global user.neme "amlslt"
+git clone --global user.email "khm66256625@gmail.com"
+
+
