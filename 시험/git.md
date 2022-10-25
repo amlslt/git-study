@@ -18,20 +18,30 @@
 ## 로컬 사용자 설정 (글로벌)
 - 사용자 이름설정 = git clone --global user.neme "amlslt"
 - 사용자 이메일 설정 = git clone --global user.email "khm66256625@gmail.com" 
+
+## 기본적인 구성
 - 폴더 만들기 = mkdir 폴더이름
 - 폴더 이동 = cd 폴더이름
 - 폴더 초기화 = git init
 - 깃 목록 보기 = ls .git
 - 환경설정 내용 보기 = cat .git/config
+
+## 깃 실습
 - 소스코드 작성 = code 이름.py
+- 파일 내용 확인 = cat 파일이름
 - 스테이지 상태 확인 = git status
 - 저장소 복제 = git clone 깃허브 주소/ 새폴더이름
 - 워킹 디렉토리의 파일을 스테이지 영역에 등록 = git add 파일이름
 - add를 삭제 = git rm --cached 파일이름
 - 수정된 파일이력 기록 = git commit -m 커밋메세지(커밋과 동시에 메세지작성) git commit -am 커밋메세지(add와 동시에 커밋, 커밋메세지 작성)
 - 커밋 기록 확인 = git log
+- 모든 로그내역 보기 = git log --graph --all
+
+## 파일변경사항 비교
 - 워킹디렉토리와 스테이징 에어리어간의 변경사항 비교 = git diff
 - 워킬 디렉토리와 마지막 영역과의 변경사항 비교 = git diff HEAD
+
+## 원격 저장소 설정
 - 원격 저장소 별칭 출력 = git remote
 - 원격 저장소에 연결 = git remote add origin(저장소 별칭) 저장소주소
 - 원격 저장소 목록확인 = git remote -v
@@ -41,12 +51,18 @@
 - 원격 저장소 복제 = git clone 원격저장소주소
 - 서버의 변경사항 내려받기 = git pull 
 - 서버의 변경사항 내려받으나 병합은 안하기 = git fetch 원격저장소주소
-- 브랜치 목록 보기 = git branch
 
-## 브랜치 생성
+
+## 브랜치 
+- 브랜치 목록 보기 = git branch
+- 브랜치 세부사항 확인 = git branch -v
+### 브랜치생성
 1. 새 폴더만들기
 2. 새 파일 작성
 3. add와 commit하기
-4. git branch 브랜치이름
+4. git branch 브랜치이름 --이름 중복 x
+### 브랜치 설정
+- 현재브랜치를 떠나 다른 브랜치로 이동 = git checkout 브랜치이름
+- 
 
 ## 
