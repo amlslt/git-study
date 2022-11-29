@@ -60,3 +60,42 @@
 > git switch <브랜치이름> [브랜치 이동]
 > git branch -d <브랜치이름> [브랜치 삭제]
 > git branch -D <브랜치이름> [브랜치 강제 삭제]</pre>
+
+## Fast-Forward merge/3-way merge/rebase
+### Fast=Forward merge
+> 빨리 감기라는 의미로, 혼자 개발할 때 사용하는 병합방식이다<br>
+> 병합할 대상이 현재 커밋의 뿌리일때 main브랜치에서 병합을 할 수 있다.<br>
+> <pre>현재 브랜치가 main(master)일때
+>git merge <브랜치이름></pre>
+
+### 3-way merge
+> 여러 개발자가 협력을 할때 사용하는 병합방식이다.<br>
+> 두개의 브랜치 조상이 같을 때 새로운 커밋에 기존 커밋을 합체한다<br>
+> 앞선 merge와는 다르게 충돌 가능성 존재
+> <pre>git merge <브랜치명> --no-ff
+>git merge <브랜치명> --edit [커밋 메세지 직접 작성]
+>git reset --hard HEAD^ [병합 취소]</pre>
+
+### rebase
+> merge와 다르게 다른 브랜치 기준에서 현재 브랜치를 병합하는 방식이다
+> <pre>현재와 다른 브랜치로 이동
+> git rebase <브랜치명>
+> git rebase --abort [rebase 취소]
+> git rebase -i HEAD~3 [커밋 묶기]</pre>
+
+## reset/revert
+> 커밋을 기준으로 이전 코드로 되돌리는 방법<br>
+> 기록한 커밋을 취소한다.
+> <pre>git reset <옵션> <커밋ID>
+git reset --hard orig_head [reset 이후 다시 원상태로 되돌리기]
+</pre>
+> > <pre><b>옵션<b>
+soft:스테이지 영역을 포함한 상태로 복원
+mixed: 기본옵션
+hard: 실제 파일이 삭제된 이전 상태로 복원</pre>
+### revert
+> 지정 커밋이력을 취소하고 이전상태로 돌아가는 기능<br>
+> 현재 이력에 되돌아간 이력까지 추가된다.
+> <pre>git revert HEAD [현재 커밋을 리버트]
+> git revert <커밋ID> [다른 커밋을 취소]
+> git revert --mainline <숫자> <커밋ID> [리버트로 병합 취소]</pre>
