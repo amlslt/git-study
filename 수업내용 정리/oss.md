@@ -87,12 +87,13 @@
 > 커밋을 기준으로 이전 코드로 되돌리는 방법<br>
 > 기록한 커밋을 취소한다.
 > <pre>git reset <옵션> <커밋ID>
-git reset --hard orig_head [reset 이후 다시 원상태로 되돌리기]
+> git reset --hard orig_head [reset 이후 다시 원상태로 되돌리기]</pre>
+> > <pre><b>옵션</b>
+> > soft:스테이지 영역을 포함한 상태로 복원
+> > mixed: 기본옵션
+> > hard: 실제 파일이 삭제된 이전 상태로 복원
 </pre>
-> > <pre><b>옵션<b>
-soft:스테이지 영역을 포함한 상태로 복원
-mixed: 기본옵션
-hard: 실제 파일이 삭제된 이전 상태로 복원</pre>
+
 ### revert
 > 지정 커밋이력을 취소하고 이전상태로 돌아가는 기능<br>
 > 현재 이력에 되돌아간 이력까지 추가된다.
